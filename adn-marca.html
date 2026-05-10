@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADN de Marca — Cuestionario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="adn-marca.css">
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+<div class="page-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <p class="eyebrow">Cuestionario</p>
+      <h1>ADN de<br><em>Marca</em></h1>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <button class="nav-item active" onclick="goToSection(1)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">01</span>
+          <span class="nav-label">Tu propuesta en el mundo</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goToSection(2)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">02</span>
+          <span class="nav-label">Tu cliente ideal</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goToSection(3)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">03</span>
+          <span class="nav-label">Personalidad de marca</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goToSection(4)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">04</span>
+          <span class="nav-label">Tu diferencial</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goToSection(5)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">05</span>
+          <span class="nav-label">Comunicación y presencia</span>
+        </span>
+      </button>
+      <button class="nav-item" onclick="goToSection(6)">
+        <span class="nav-dot"></span>
+        <span class="nav-text">
+          <span class="nav-num">06</span>
+          <span class="nav-label">Visión y propósito</span>
+        </span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      Para emprendedores que ofrecen clases particulares y sesiones privadas.
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <div id="quiz-main" class="main">
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 16.66%"></div>
+      </div>
+
+      <!-- ── SECCIÓN 1 ── -->
+      <div class="section active" id="s1">
+        <div class="section-header">
+          <p class="section-num">01 / 06</p>
+          <h2 class="section-title">Tu propuesta<br>en el mundo</h2>
+          <p class="section-desc">Empezamos por lo más esencial: quién sos y qué ofrecés. No te preocupes por la perfección, escribí lo primero que surge.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cómo te llamás o cómo se llama tu proyecto?</label>
+          <input type="text" id="q_nombre" placeholder="Ej: Laura Pérez / Mente en Movimiento">
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué tipo de clases o sesiones ofrecés?</label>
+          <span class="field-hint">Podés mencionar más de uno. Sé específico/a.</span>
+          <input type="text" id="q_servicio" placeholder="Ej: Clases de piano, coaching ejecutivo, yoga prenatal...">
+        </div>
+
+        <div class="field">
+          <label class="field-label">En una sola oración: ¿qué hacés y para quién?</label>
+          <span class="field-hint">Esta es la semilla de tu propuesta de valor. No tiene que ser perfecta.</span>
+          <textarea id="q_propuesta" placeholder="Ej: Ayudo a adultos ocupados a aprender guitarra sin frustración, desde cero y a su ritmo."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cuánto tiempo llevás haciendo esto?</label>
+          <div class="chips" id="chips_exp">
+            <div class="chip" data-group="chips_exp" data-single="true">Menos de 1 año</div>
+            <div class="chip" data-group="chips_exp" data-single="true">1 a 3 años</div>
+            <div class="chip" data-group="chips_exp" data-single="true">3 a 7 años</div>
+            <div class="chip" data-group="chips_exp" data-single="true">Más de 7 años</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN 2 ── -->
+      <div class="section" id="s2">
+        <div class="section-header">
+          <p class="section-num">02 / 06</p>
+          <h2 class="section-title">Tu cliente<br>ideal</h2>
+          <p class="section-desc">Cuanto más claro tengas a quién servís, más poderosa será tu comunicación y más fácil atraer a las personas correctas.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿A quién ayudás principalmente?</label>
+          <span class="field-hint">Pensá en edad, situación de vida, profesión, motivaciones.</span>
+          <textarea id="q_cliente" placeholder="Ej: Adultos de 30 a 50 años, con trabajo estable, que quieren retomar algo que dejaron pendiente en su juventud..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cuál es el principal problema o deseo que tiene tu cliente antes de encontrarte?</label>
+          <textarea id="q_problema" placeholder="Ej: Quieren aprender, pero no saben por dónde empezar y tienen miedo de no tener talento o tiempo suficiente..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cómo se siente tu cliente después de trabajar con vos?</label>
+          <textarea id="q_resultado" placeholder="Ej: Seguro/a, con una habilidad concreta, orgulloso/a de sí mismo/a, con más confianza en general..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué tipo de perfil suele acudir a tus clases?</label>
+          <div class="chips" id="chips_perfil">
+            <div class="chip" data-group="chips_perfil" data-single="true">Principiantes absolutos</div>
+            <div class="chip" data-group="chips_perfil" data-single="true">Nivel intermedio</div>
+            <div class="chip" data-group="chips_perfil" data-single="true">Avanzados que quieren perfeccionar</div>
+            <div class="chip" data-group="chips_perfil" data-single="true">Variado / mixto</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN 3 ── -->
+      <div class="section" id="s3">
+        <div class="section-header">
+          <p class="section-num">03 / 06</p>
+          <h2 class="section-title">Personalidad<br>de marca</h2>
+          <p class="section-desc">Tu marca tiene una voz, un estilo, una energía propia. Vamos a encontrarla y definirla con precisión.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">Si tu marca fuese una persona, ¿qué palabras la describirían?</label>
+          <span class="field-hint">Elegí entre 3 y 5 opciones.</span>
+          <div class="chips" id="chips_personalidad">
+            <div class="chip" data-group="chips_personalidad">Cercana</div>
+            <div class="chip" data-group="chips_personalidad">Profesional</div>
+            <div class="chip" data-group="chips_personalidad">Creativa</div>
+            <div class="chip" data-group="chips_personalidad">Rigurosa</div>
+            <div class="chip" data-group="chips_personalidad">Motivadora</div>
+            <div class="chip" data-group="chips_personalidad">Tranquila</div>
+            <div class="chip" data-group="chips_personalidad">Apasionada</div>
+            <div class="chip" data-group="chips_personalidad">Divertida</div>
+            <div class="chip" data-group="chips_personalidad">Intuitiva</div>
+            <div class="chip" data-group="chips_personalidad">Estructurada</div>
+            <div class="chip" data-group="chips_personalidad">Empática</div>
+            <div class="chip" data-group="chips_personalidad">Exigente</div>
+            <div class="chip" data-group="chips_personalidad">Auténtica</div>
+            <div class="chip" data-group="chips_personalidad">Innovadora</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="field">
+          <label class="field-label">Ubicá tu marca en estos ejes</label>
+          <span class="field-hint">Deslizá hacia el extremo que mejor te representa. No hay respuestas correctas.</span>
+
+          <div class="slider-block">
+            <p class="slider-name">Tono general</p>
+            <div class="slider-labels-row">
+              <span class="slider-end">Formal y profesional</span>
+              <span class="slider-end right">Informal y cercano</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" id="s_formalidad" oninput="updateSlider('s_formalidad','v_formalidad')">
+            <div class="slider-val-row"><span class="slider-val" id="v_formalidad">5 / 10</span></div>
+          </div>
+
+          <div class="slider-block">
+            <p class="slider-name">Enfoque</p>
+            <div class="slider-labels-row">
+              <span class="slider-end">Racional y técnica</span>
+              <span class="slider-end right">Emocional e intuitiva</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" id="s_emocional" oninput="updateSlider('s_emocional','v_emocional')">
+            <div class="slider-val-row"><span class="slider-val" id="v_emocional">5 / 10</span></div>
+          </div>
+
+          <div class="slider-block">
+            <p class="slider-name">Estética</p>
+            <div class="slider-labels-row">
+              <span class="slider-end">Clásica y tradicional</span>
+              <span class="slider-end right">Moderna e innovadora</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" id="s_moderna" oninput="updateSlider('s_moderna','v_moderna')">
+            <div class="slider-val-row"><span class="slider-val" id="v_moderna">5 / 10</span></div>
+          </div>
+
+          <div class="slider-block">
+            <p class="slider-name">Posicionamiento</p>
+            <div class="slider-labels-row">
+              <span class="slider-end">Exclusiva y premium</span>
+              <span class="slider-end right">Accesible y para todos</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" id="s_accesible" oninput="updateSlider('s_accesible','v_accesible')">
+            <div class="slider-val-row"><span class="slider-val" id="v_accesible">5 / 10</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN 4 ── -->
+      <div class="section" id="s4">
+        <div class="section-header">
+          <p class="section-num">04 / 06</p>
+          <h2 class="section-title">Tu<br>diferencial</h2>
+          <p class="section-desc">¿Por qué alguien elegiría trabajar con vos y no con otro? Esta es la médula de tu propuesta de marca.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué hacés diferente a otros que ofrecen algo similar?</label>
+          <span class="field-hint">Pensá en método, enfoque, experiencia, valores, estilo personal.</span>
+          <textarea id="q_diferencial" placeholder="Ej: Combino técnica clásica con improvisación y adapto el ritmo completamente a cada alumno sin presiones ni comparaciones..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Hay algo que no hacés o en lo que te negás a ceder?</label>
+          <span class="field-hint">Los límites también definen una marca. Tus "no" son tan importantes como tus "sí".</span>
+          <textarea id="q_nohace" placeholder="Ej: No trabajo con grupos grandes de más de 6 personas, no prometo resultados en plazos irreales..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cuál es tu filosofía central sobre la enseñanza o el acompañamiento?</label>
+          <textarea id="q_filosofia" placeholder="Ej: Creo que cualquier persona puede aprender cualquier cosa si encuentra el método correcto para sí misma. El problema nunca es el alumno..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué palabras o frases jamás usarías para describir tu trabajo?</label>
+          <input type="text" id="q_nowords" placeholder="Ej: masivo, genérico, fast-track, garantizado en 30 días, fórmula infalible...">
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN 5 ── -->
+      <div class="section" id="s5">
+        <div class="section-header">
+          <p class="section-num">05 / 06</p>
+          <h2 class="section-title">Comunicación<br>y presencia</h2>
+          <p class="section-desc">Cómo hablás, dónde estás y cómo querés que te recuerden. La consistencia en esto es lo que construye confianza.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cómo conseguís actualmente la mayoría de tus clientes?</label>
+          <span class="field-hint">Seleccioná todos los que apliquen.</span>
+          <div class="chips" id="chips_canales">
+            <div class="chip" data-group="chips_canales">Boca a boca</div>
+            <div class="chip" data-group="chips_canales">Instagram</div>
+            <div class="chip" data-group="chips_canales">Facebook</div>
+            <div class="chip" data-group="chips_canales">LinkedIn</div>
+            <div class="chip" data-group="chips_canales">Google / SEO</div>
+            <div class="chip" data-group="chips_canales">TikTok</div>
+            <div class="chip" data-group="chips_canales">YouTube</div>
+            <div class="chip" data-group="chips_canales">Sitio web propio</div>
+            <div class="chip" data-group="chips_canales">Eventos / talleres</div>
+            <div class="chip" data-group="chips_canales">Otros</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cómo describirías tu estilo de comunicación actual?</label>
+          <textarea id="q_comstyle" placeholder="Ej: Directo pero cálido, con ejemplos concretos y humor ocasional. Evito el lenguaje técnico innecesario..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué querés que alguien piense o sienta cuando conoce tu marca por primera vez?</label>
+          <textarea id="q_primeraimpresion" placeholder="Ej: 'Esto es exactamente lo que necesitaba', 'se nota que sabe y que genuinamente le importa'..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">Si un cliente te recomendara a alguien, ¿qué querés que diga de vos?</label>
+          <textarea id="q_recomendacion" placeholder="Ej: 'Andá con ella, es la mejor profesora que tuve. Te explica todo sin que te sientas tonto, y realmente ve tu progreso'..."></textarea>
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN 6 ── -->
+      <div class="section" id="s6">
+        <div class="section-header">
+          <p class="section-num">06 / 06</p>
+          <h2 class="section-title">Visión y<br>propósito</h2>
+          <p class="section-desc">Una marca con raíz mira hacia adelante. Estas preguntas anclan el para qué detrás de todo lo que hacés.</p>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Por qué empezaste con esto? ¿Qué te mueve a hacerlo?</label>
+          <span class="field-hint">Este es el corazón de tu marca. No hay respuesta incorrecta.</span>
+          <textarea id="q_porque" placeholder="Ej: Tuve un maestro que cambió completamente mi relación con el aprendizaje y quiero ser eso para alguien más..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Cómo imaginás tu proyecto en 3 años?</label>
+          <textarea id="q_vision" placeholder="Ej: Con agenda llena de alumnos que me eligen de manera consciente, un método propio documentado y quizás un equipo pequeño..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Qué tres palabras definirían tu marca? Tu mantra.</label>
+          <span class="field-hint">No pienses demasiado. Escribí lo primero que surge.</span>
+          <input type="text" id="q_mantra" placeholder="Ej: Claridad, confianza, transformación">
+        </div>
+
+        <div class="field">
+          <label class="field-label">¿Algo más que quieras expresar sobre tu marca?</label>
+          <span class="field-hint">Espacio libre para lo que no cupo en las preguntas anteriores.</span>
+          <textarea id="q_libre" placeholder="Podés escribir lo que quieras aquí..."></textarea>
+        </div>
+      </div>
+
+      <!-- NAV BUTTONS -->
+      <div class="nav-row" id="nav-row">
+        <button class="btn" id="btn-prev" onclick="navigate(-1)" disabled>← Anterior</button>
+        <span class="step-indicator" id="step-indicator">1 de 6</span>
+        <button class="btn primary" id="btn-next" onclick="navigate(1)">Siguiente →</button>
+      </div>
+
+    </div><!-- /quiz-main -->
+
+    <!-- DONE SCREEN -->
+    <div id="done-screen">
+      <div class="done-badge">
+        <span class="dot"></span>
+        <span>Cuestionario completo</span>
+      </div>
+
+      <h2 class="done-title">Tu ADN de<br>marca está <em>listo</em></h2>
+      <p class="done-sub">Respondiste las 6 secciones. Ahora descargá tu documento con toda la información organizada, lista para usar como base de tu estrategia de marca.</p>
+
+      <div class="done-actions">
+        <button class="btn-pdf" onclick="generatePDF()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Descargar PDF
+        </button>
+        <button class="btn-restart" onclick="resetQuiz()">Empezar de nuevo</button>
+      </div>
+
+      <div class="mantra-card" id="mantra-preview">
+        <p class="mantra-eyebrow">Tu mantra de marca</p>
+        <p class="mantra-text" id="mantra-display">—</p>
+        <p class="mantra-sub" id="propuesta-display">—</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="ui.js"></script>
+<script src="pdf.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
